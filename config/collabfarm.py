@@ -78,7 +78,7 @@ class FarmConfig(DefaultConfig):
 
     # remove from user prefs
     user_checkbox_remove = [ 'disabled', 'remember_me' ]
-    #user_form_remove = [ 'password', 'password2' ]
+    user_form_remove = [ 'phone' ]
     user_form_disable = [ 'name', 'aliasname', 'email' ]
 
     # Force usernames to lower case (needed for ejabberd authentication in some caese)
