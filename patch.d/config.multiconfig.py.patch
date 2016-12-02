@@ -1,6 +1,6 @@
---- ./MoinMoin/config/multiconfig.py.orig	2014-10-17 22:45:32.000000000 +0300
-+++ ./MoinMoin/config/multiconfig.py	2016-08-15 22:34:12.813289705 +0300
-@@ -12,6 +12,7 @@ import re
+--- ./MoinMoin/config/multiconfig.py.orig	2016-10-31 22:44:02.000000000 +0200
++++ ./MoinMoin/config/multiconfig.py	2016-11-28 15:26:43.686260441 +0200
+@@ -13,6 +13,7 @@ import re
  import os
  import sys
  import time

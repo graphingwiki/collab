@@ -1,6 +1,6 @@
---- ./MoinMoin/action/recoverpass.py.orig	2014-10-17 22:45:32.000000000 +0300
-+++ ./MoinMoin/action/recoverpass.py	2014-10-20 12:06:36.379542936 +0300
-@@ -70,15 +70,9 @@
+--- ./MoinMoin/action/recoverpass.py.orig	2016-10-31 22:44:01.000000000 +0200
++++ ./MoinMoin/action/recoverpass.py	2016-11-28 15:26:43.685260441 +0200
+@@ -70,15 +70,9 @@ def _create_form(request):
  
      row = html.TR()
      tbl.append(row)
@@ -17,7 +17,7 @@
  
      row = html.TR()
      tbl.append(row)
-@@ -111,7 +105,7 @@
+@@ -111,7 +105,7 @@ def _create_token_form(request, name=Non
  
      row = html.TR()
      tbl.append(row)

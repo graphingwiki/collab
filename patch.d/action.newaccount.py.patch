@@ -1,6 +1,6 @@
---- ./MoinMoin/action/newaccount.py.orig	2014-10-17 22:45:32.000000000 +0300
-+++ ./MoinMoin/action/newaccount.py	2014-10-20 12:06:36.348542933 +0300
-@@ -31,7 +31,8 @@
+--- ./MoinMoin/action/newaccount.py.orig	2016-10-31 22:44:01.000000000 +0200
++++ ./MoinMoin/action/newaccount.py	2016-11-28 15:26:43.683260441 +0200
+@@ -31,7 +31,8 @@ def _create_user(request):
  
      # Require non-empty name
      try:
@@ -10,7 +10,7 @@
      except KeyError:
          return _("Empty user name. Please enter a user name.")
  
-@@ -104,12 +105,9 @@
+@@ -104,12 +105,9 @@ def _create_form(request):
  
      row = html.TR()
      tbl.append(row)
@@ -26,7 +26,7 @@
  
      row = html.TR()
      tbl.append(row)
-@@ -125,12 +123,6 @@
+@@ -125,12 +123,6 @@ def _create_form(request):
      row.append(html.TD().append(html.INPUT(type="password", size="36",
                                             name="password2")))
  
@@ -39,7 +39,7 @@
      textcha = TextCha(request)
      if textcha.is_enabled():
          row = html.TR()
-@@ -159,7 +151,7 @@
+@@ -159,7 +151,7 @@ def execute(pagename, request):
              found = True
              break
  
