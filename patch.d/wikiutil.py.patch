@@ -1,5 +1,14 @@
 --- ./MoinMoin/wikiutil.py.orig	2016-10-31 22:44:02.000000000 +0200
-+++ ./MoinMoin/wikiutil.py	2016-11-28 15:26:43.689260441 +0200
++++ ./MoinMoin/wikiutil.py	2016-12-02 15:09:35.147408158 +0200
+@@ -12,7 +12,7 @@
+ 
+ import cgi
+ import codecs
+-import hmac
++import hmac, hashlib
+ import os
+ import re
+ import time
 @@ -471,15 +471,15 @@ def load_wikimap(request):
          generate_file_list(request)
  
@@ -33,7 +42,7 @@
 +            path = request.cfg.collab_basedir
 +            baseurl = request.cfg.collab_baseurl
 +            collablist = listCollabs(baseurl, user, path, active)
-+            
++
 +            for collab in collablist:
 +                _interwiki_list[collab[0]] = collab[3]
 +
@@ -60,5 +69,14 @@
 -    basename = re.sub('[\x00-\x1f:/\\\\<>"*?%|]', '_', basename)
 +    basename = re.sub('[\x00-\x1f:/\\\\<>"*?|]', '_', basename)
      return basename
+ 
+ 
+@@ -2530,7 +2548,7 @@ def createTicket(request, tm=None, actio
+         hmac_data.append(value)
+ 
+     h = hmac.new(request.cfg.secrets['wikiutil/tickets'],
+-                 ''.join(hmac_data))
++                 ''.join(hmac_data), digestmod=hashlib.sha1)
+     return "%s.%s" % (tm, h.hexdigest())
  
  
