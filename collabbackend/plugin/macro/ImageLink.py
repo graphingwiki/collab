@@ -129,12 +129,12 @@ def explore_args(args, kwAllowed):
             if key.lower() not in kwAllowed:
                 if not kw_count and _is_URL(arg):
                     # assuming that this is the image
-                    pp.append(wikiutil.escape(arg, quote=1))
+                    pp.append(wikiutil.escape(arg))
                 continue
             kw_count += 1
-            kw[str(key.lower())] = wikiutil.escape(value, quote=1)
+            kw[str(key.lower())] = wikiutil.escape(value)
         else:
-            pp.append(wikiutil.escape(arg, quote=1))
+            pp.append(wikiutil.escape(arg))
 
     return pp, len(pp), kw, len(kw)
 

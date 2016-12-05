@@ -152,7 +152,7 @@ class Theme(ThemeParent):
         mylogo = ThemeParent.logo(self)
         if not mylogo:
             mylogo = u'''<span>%s</span>''' % \
-                     wikiutil.escape(self.cfg.sitename, True)
+                     wikiutil.escape(self.cfg.sitename)
 
         return mylogo
 

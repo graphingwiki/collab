@@ -20,7 +20,7 @@ class requestinvite(ActionBase):
         self.request = request
         self.use_ticket = True
         self.form_trigger = 'requestinvite'
-        self.form_trigger_label = wikiutil.escape(kw.get('button_text', [self.getText('Send Request')])[0], True)
+        self.form_trigger_label = wikiutil.escape(kw.get('button_text', [self.getText('Send Request')])[0])
         self.querytext = kw.get('text', [self.getText('Send invite request for collab')])[0]
 
         form = values_to_form(self.request.values)
