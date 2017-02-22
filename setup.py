@@ -93,7 +93,7 @@ setup(
     name='collabbackend',
     version='1.0.0',
     author='Marko Laakso, Jani Kenttälä',
-    author_email='contact@clarifiednetworks.com',
+    author_email='contact@abusesa.com',
     description='Collab Backend',
     packages=[
         'collabbackend',
