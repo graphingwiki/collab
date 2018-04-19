@@ -91,7 +91,7 @@ class RemovingInstall(install):
 
 setup(
     name='collabbackend',
-    version='1.1.0',
+    version='1.1.1',
     author='Marko Laakso, Jani Kenttälä',
     author_email='contact@abusesa.com',
     description='Collab Backend',
