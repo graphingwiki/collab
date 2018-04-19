@@ -64,6 +64,7 @@ class RequestCache(object):
             if not os.path.isdir(wikiname) or not os.path.isdir(myconfig):
                 return False
 
+        old_sys_path = list(sys.path)
         sys.path.insert(0, myconfig)
 
         reload(multiconfig)
@@ -81,7 +82,7 @@ class RequestCache(object):
             pass
 
         request = RequestCLI(pagename)
-        sys.path.remove(myconfig)
+        sys.path = old_sys_path
         return request
 
     def _unload(self, request):
